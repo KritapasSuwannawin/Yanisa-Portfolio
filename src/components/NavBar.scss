@@ -1,0 +1,61 @@
+@import '../scss/main.scss';
+
+.nav-bar {
+  .nav-container {
+    max-width: 136rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5.5rem 10rem;
+    margin-bottom: -0.1rem;
+
+    .nav-left {
+      .nav-name {
+        font-style: italic;
+        font-weight: 600;
+        font-size: 2.8rem;
+        line-height: 130%;
+        color: #fff;
+        text-decoration: none;
+
+        .nav-bold {
+          font-weight: 800;
+        }
+      }
+    }
+
+    .nav-right {
+      @include display-flex-between;
+      font-weight: 800;
+      font-size: 1.8rem;
+      color: rgba(250, 250, 250, 0.8);
+      width: 50rem;
+      margin-left: 5rem;
+
+      .nav-link {
+        text-decoration: none;
+        color: rgba(250, 250, 250, 0.8);
+        z-index: 2;
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .nav-bar {
+    .nav-container {
+      padding: 5.5rem 5rem;
+
+      .nav-left {
+        .nav-name {
+          font-size: 2.2rem;
+        }
+      }
+
+      .nav-right {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}

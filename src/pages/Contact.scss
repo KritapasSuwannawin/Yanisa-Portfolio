@@ -1,0 +1,113 @@
+@import '../scss/main.scss';
+
+.contact {
+  min-height: 100vh;
+  background-color: #9d94ff;
+  overflow-x: hidden;
+
+  .container {
+    max-width: 136rem;
+    margin: 0 auto;
+    padding: 0 10rem 10rem 10rem;
+
+    .main {
+      margin: 15rem 12rem 0 12rem;
+      background-color: #f6a546;
+      @include display-flex-center;
+      padding: 12.3rem;
+      box-shadow: 0 0.4rem 6rem rgba(0, 0, 0, 0.05);
+      border-radius: 15rem 5rem 15rem 15rem;
+      position: relative;
+
+      .contact-me {
+        position: absolute;
+        left: calc(50% - 25rem);
+        top: -18rem;
+      }
+
+      .content {
+        font-weight: 600;
+        font-size: 3rem;
+        line-height: 4.1rem;
+        color: #000;
+      }
+
+      .right-bubble {
+        position: absolute;
+        right: -13rem;
+        top: 6rem;
+        width: 18.8rem;
+        height: 18.8rem;
+        background-color: #6154f2;
+        border-radius: 8% 50% 50% 50%;
+      }
+
+      .left-bubble {
+        position: absolute;
+        left: -12rem;
+        bottom: 1.7rem;
+        width: 18.8rem;
+        height: 18.8rem;
+        background-color: #6154f2;
+        border-radius: 50% 8% 50% 50%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  .contact {
+    .container {
+      .main {
+        margin-right: 5rem;
+        margin-left: 5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .contact {
+    .container {
+      @include display-flex-center;
+      min-height: calc(100vh - 50rem);
+
+      .main {
+        margin-right: 0;
+        margin-left: 0;
+        padding: 10rem;
+        border-radius: 10rem 5rem 10rem 10rem;
+
+        .content {
+          font-size: 2.5rem;
+        }
+
+        .right-bubble,
+        .left-bubble {
+          width: 16rem;
+          height: 16rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .contact {
+    .container {
+      padding-right: 5rem;
+      padding-left: 5rem;
+
+      .main {
+        .contact-me {
+          width: 40rem;
+          left: calc(50% - 20rem);
+        }
+
+        .right-bubble {
+          right: -10rem;
+        }
+      }
+    }
+  }
+}
