@@ -29,10 +29,8 @@
             font-size: 5.23rem;
             line-height: 140%;
 
-            .shadow {
-              .no-wrap {
-                white-space: nowrap;
-              }
+            .no-wrap {
+              white-space: nowrap;
             }
           }
 
@@ -177,9 +175,16 @@
         border-radius: 17rem 10% 12rem 12rem;
         padding: 2.6rem 2.6rem 0 2.6rem;
         text-decoration: none;
+        transition: all 0.2s;
 
         &:hover {
           transform: scale(1.015);
+          box-shadow: 1rem 1rem 5rem 0 rgba(0, 0, 0, 0.05);
+        }
+
+        &:active {
+          transform: scale(1.01);
+          box-shadow: 1rem 1rem 3rem 0 rgba(0, 0, 0, 0.075);
         }
 
         .bubble {

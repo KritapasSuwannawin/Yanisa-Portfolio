@@ -28,9 +28,7 @@ function Home() {
           <div className="main">
             <div className="left">
               <p className="title">
-                <span className="shadow">
-                  Yanisa <span className="no-wrap">Bhisitcharoentat ,</span>
-                </span>
+                Yanisa <span className="no-wrap">Bhisitcharoentat ,</span>
                 <br></br>
                 Graphic Designer &<br></br>
                 UX UI Designer
