@@ -1,10 +1,10 @@
 @import '../scss//main.scss';
 
 .certificate {
-  background-color: #6154f2;
+  background-color: $primary-color;
 
   .container {
-    max-width: 136rem;
+    max-width: $max-width;
     padding: 0 10rem;
     margin: 0 auto;
 

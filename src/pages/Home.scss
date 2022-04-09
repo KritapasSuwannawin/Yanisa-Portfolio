@@ -1,18 +1,18 @@
 @import '../scss/main.scss';
 
 .home {
-  background-color: #ececfb;
+  background-color: $background-color;
   overflow-x: hidden;
 
   .home-hero {
-    background-color: #6154f2;
+    background-color: $primary-color;
     color: #fff;
     padding-top: 5rem;
     padding-bottom: 3.8rem;
     position: relative;
 
     .container {
-      max-width: 136rem;
+      max-width: $max-width;
       padding: 0 10rem;
       margin: 0 auto;
       min-height: calc(100vh - 27.08rem);
@@ -45,7 +45,7 @@
             font-size: 1.8rem;
             line-height: 180%;
             padding: 1.5rem 4.2rem;
-            background-color: #f6a546;
+            background-color: $secondary-color;
             box-shadow: 0 0.4rem 6rem rgba(0, 0, 0, 0.05);
             border-radius: 1rem;
             width: fit-content;
@@ -62,7 +62,7 @@
           .bubble {
             width: 60rem;
             height: 60rem;
-            background: #f6a546;
+            background: $secondary-color;
             margin-right: -10rem;
             border-radius: 50% 4% 50% 50%;
             position: relative;
@@ -70,8 +70,8 @@
             .welcome {
               position: absolute;
               width: 70%;
-              top: -14rem;
-              right: 5rem;
+              top: -23.33%;
+              right: 8.33%;
             }
 
             .profile {
@@ -84,13 +84,13 @@
             }
 
             .sub-bubble {
-              width: 21.5rem;
-              height: 21.5rem;
-              background: #9d94ff;
+              width: 35.83%;
+              height: 35.83%;
+              background: $tertiary-color;
               border-radius: 4% 50% 50% 50%;
               position: absolute;
               left: 0;
-              bottom: -3.8rem;
+              bottom: -6.33%;
               border: 0.1rem solid rgba(0, 0, 0, 0.2);
             }
           }
@@ -104,7 +104,7 @@
       bottom: -0.1rem;
       width: 55%;
       height: 15vw;
-      background-color: #ececfb;
+      background-color: $background-color;
       -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
       clip-path: polygon(100% 0, 0% 100%, 100% 100%);
     }
@@ -120,7 +120,7 @@
     .web-seperator {
       width: 100%;
       height: 1.5rem;
-      background-color: #f6a546;
+      background-color: $secondary-color;
       border-radius: 1rem;
       margin-top: 3rem;
       box-shadow: 0 0 1rem 0 #f6e446;
@@ -136,7 +136,7 @@
   }
 
   .home-work {
-    max-width: 136rem;
+    max-width: $max-width;
     padding: 0 10rem;
     margin: 0 auto;
 
@@ -157,7 +157,7 @@
         line-height: 180%;
         color: #fff;
         padding: 1.5rem 4rem;
-        background-color: #6154f2;
+        background-color: $primary-color;
         box-shadow: 0 0.4rem 6rem rgba(0, 0, 0, 0.05);
         border-radius: 1rem;
         text-decoration: none;
@@ -209,7 +209,7 @@
         line-height: 180%;
         color: #fff;
         padding: 1.5rem 4rem;
-        background-color: #6154f2;
+        background-color: $primary-color;
         box-shadow: 0 0.4rem 6rem rgba(0, 0, 0, 0.05);
         border-radius: 1rem;
         display: none;
@@ -227,35 +227,35 @@
       .bubble-container-main {
         width: 66.7rem;
         height: 66.7rem;
-        background-color: #f6a546;
+        background-color: $secondary-color;
         border-radius: 5% 50% 50% 50%;
         position: relative;
 
         .bubble-container-top-left {
           position: absolute;
-          top: -5.8rem;
-          left: 8.6rem;
-          height: 36.7rem;
-          width: 30.3rem;
+          top: -8.7%;
+          left: 12.89%;
+          height: 55.02%;
+          width: 45.43%;
           background-color: #fff;
           box-shadow: 0 0.34rem 10.2rem rgba(58, 86, 78, 0.07);
           border-radius: 10% 14rem 11rem 11rem;
           padding: 2.1rem 2.1rem 0 2.1rem;
 
           .bubble-top-left {
-            width: 26rem;
-            height: 26rem;
+            width: 100%;
+            height: 75.14%;
             border-radius: 10% 50% 50% 50%;
           }
         }
 
         .bubble-top-right {
           position: absolute;
-          right: 4.6rem;
-          top: 4.6rem;
-          width: 21.5rem;
-          height: 21.5rem;
-          background-color: #6154f2;
+          right: 6.9%;
+          top: 6.9%;
+          width: 32.23%;
+          height: 32.23%;
+          background-color: $primary-color;
           border-radius: 50% 10% 50% 50%;
           z-index: 1;
         }
@@ -263,9 +263,9 @@
         .bubble-container-bottom-right {
           position: absolute;
           bottom: 0;
-          right: 11.3rem;
-          height: 44.2rem;
-          width: 36.4rem;
+          right: 16.94%;
+          width: 54.57%;
+          height: 66.27%;
           background-color: #fff;
           box-shadow: 0 0.34rem 10.2rem rgba(58, 86, 78, 0.07);
           border-radius: 17rem 10% 12rem 10rem;
@@ -273,19 +273,19 @@
           box-shadow: -1rem -1rem 15rem rgba(58, 86, 78, 0.3);
 
           .bubble-bottom-right {
-            width: 31.4rem;
-            height: 32.2rem;
+            width: 100%;
+            height: 76.67%;
             border-radius: 50% 10% 50% 50%;
           }
         }
 
         .bubble-bottom-left {
           position: absolute;
-          left: 7rem;
-          bottom: -3.5rem;
-          width: 21.5rem;
-          height: 21.5rem;
-          background-color: #6154f2;
+          left: 10.49%;
+          bottom: -5.25%;
+          width: 32.23%;
+          height: 32.23%;
+          background-color: $primary-color;
           border-radius: 10% 50% 50% 50%;
           z-index: 1;
         }
@@ -317,7 +317,7 @@
         line-height: 180%;
         color: #fff;
         padding: 1.5rem 4.3rem;
-        background-color: #6154f2;
+        background-color: $primary-color;
         box-shadow: 0 0.4rem 6rem rgba(0, 0, 0, 0.05);
         border-radius: 1rem;
         width: fit-content;
@@ -335,7 +335,7 @@
   //   .container {
   //     max-width: 130rem;
   //     margin: 0 auto;
-  //     background-color: #f6a546;
+  //     background-color: $secondary-color;
   //     box-shadow: 0 0.4rem 6rem rgba(0, 0, 0, 0.05);
   //     padding: 3.2rem 5.5rem 2.8rem 5.5rem;
   //     border-radius: 20rem 5rem 20rem 10rem;
@@ -407,7 +407,7 @@
   //       color: #fff;
   //       text-shadow: 0 0.4rem 6rem rgba(0, 0, 0, 0.05);
   //       padding: 1.5rem 5.4rem;
-  //       background-color: #6154f2;
+  //       background-color: $primary-color;
   //       box-shadow: 0 0.4rem 6rem rgba(0, 0, 0, 0.05);
   //       border-radius: 1rem;
   //       width: fit-content;
@@ -419,7 +419,7 @@
   //       top: 4rem;
   //       width: 16.7rem;
   //       height: 16.7rem;
-  //       background-color: #6154f2;
+  //       background-color: $primary-color;
   //       border-radius: 10% 50% 50% 50%;
   //       z-index: 1;
   //     }
@@ -430,7 +430,7 @@
   //       bottom: 4rem;
   //       width: 16.7rem;
   //       height: 16.7rem;
-  //       background-color: #6154f2;
+  //       background-color: $primary-color;
   //       border-radius: 50% 10% 50% 50%;
   //       z-index: 1;
   //     }
@@ -471,7 +471,7 @@
         width: 5rem;
         height: 5rem;
         border-radius: 50%;
-        background-color: #6154f2;
+        background-color: $primary-color;
         color: #fff;
         @include display-flex-center;
 
@@ -493,19 +493,6 @@
               width: 40vw;
               height: 40vw;
               margin-right: -5rem;
-
-              .welcome {
-                position: absolute;
-                width: 70%;
-                top: -9.33vw;
-                right: 3.33vw;
-              }
-
-              .sub-bubble {
-                width: 14.33vw;
-                height: 14.33vw;
-                bottom: -2.53vw;
-              }
             }
           }
         }
@@ -519,44 +506,13 @@
           height: 44.46vw;
 
           .bubble-container-top-left {
-            top: -3.86vw;
-            left: 5.73vw;
-            height: 25.06vw;
-            width: 20.2vw;
             border-radius: 10% 9.33vw 7.33vw 7.33vw;
             padding: 1.4vw 1.4vw 0 1.4vw;
-
-            .bubble-top-left {
-              width: 17.33vw;
-              height: 17.33vw;
-            }
-          }
-
-          .bubble-top-right {
-            right: 3.06vw;
-            top: 3.06vw;
-            width: 14.33vw;
-            height: 14.33vw;
           }
 
           .bubble-container-bottom-right {
-            right: 7.53vw;
-            height: 29.46vw;
-            width: 24.26vw;
             border-radius: 11.33vw 10% 8vw 6.66vw;
             padding: 1.46vw 1.46vw 0 1.46vw;
-
-            .bubble-bottom-right {
-              width: 20.93vw;
-              height: 21.46vw;
-            }
-          }
-
-          .bubble-bottom-left {
-            left: 4.66vw;
-            bottom: -2.33vw;
-            width: 14.33vw;
-            height: 14.33vw;
           }
         }
       }
@@ -614,17 +570,6 @@
               width: 72vw;
               height: 72vw;
               margin-right: 0;
-
-              .welcome {
-                top: -12vw;
-                right: 5.99vw;
-              }
-
-              .sub-bubble {
-                width: 25.79vw;
-                height: 25.79vw;
-                bottom: -4.555vw;
-              }
             }
           }
         }
@@ -666,44 +611,13 @@
           height: 80.02vw;
 
           .bubble-container-top-left {
-            top: -6.94vw;
-            left: 10.31vw;
-            height: 45.1vw;
-            width: 36.36vw;
             border-radius: 10% 16.79vw 13.19vw 13.19vw;
             padding: 2.52vw 2.52vw 0 2.52vw;
-
-            .bubble-top-left {
-              width: 31.19vw;
-              height: 31.19vw;
-            }
-          }
-
-          .bubble-top-right {
-            right: 5.5vw;
-            top: 5.5vw;
-            width: 25.79vw;
-            height: 25.79vw;
           }
 
           .bubble-container-bottom-right {
-            right: 13.55vw;
-            height: 53.02vw;
-            width: 43.66vw;
             border-radius: 20.39vw 10% 14.4vw 11.98vw;
             padding: 2.62vw 2.62vw 0 2.62vw;
-
-            .bubble-bottom-right {
-              width: 37.67vw;
-              height: 38.62vw;
-            }
-          }
-
-          .bubble-bottom-left {
-            left: 8.38vw;
-            bottom: -4.19vw;
-            width: 25.79vw;
-            height: 25.79vw;
           }
         }
       }

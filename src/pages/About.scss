@@ -2,22 +2,21 @@
 
 .about {
   min-height: 100vh;
-  background-color: #f6a546;
+  background-color: $secondary-color;
   overflow-x: hidden;
 
   .container {
     @include display-flex-between;
-    max-width: 136rem;
+    max-width: $max-width;
     padding: 0 10rem;
     margin: 0 auto;
-    color: aliceblue;
 
     .left {
       .bubble {
         width: 40rem;
         height: 40rem;
         border-radius: 8% 50% 50% 50%;
-        background-color: #6154f2;
+        background-color: $primary-color;
         position: relative;
 
         .about-me {
@@ -43,7 +42,7 @@
           width: 32.5%;
           height: 32.5%;
           border-radius: 50% 8% 50% 50%;
-          background-color: #9d94ff;
+          background-color: $tertiary-color;
           border: 1px solid rgba(0, 0, 0, 0.2);
         }
       }

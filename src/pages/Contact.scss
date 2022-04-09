@@ -2,17 +2,17 @@
 
 .contact {
   min-height: 100vh;
-  background-color: #9d94ff;
+  background-color: $tertiary-color;
   overflow-x: hidden;
 
   .container {
-    max-width: 136rem;
+    max-width: $max-width;
     margin: 0 auto;
     padding: 0 10rem 10rem 10rem;
 
     .main {
       margin: 15rem 12rem 0 12rem;
-      background-color: #f6a546;
+      background-color: $secondary-color;
       @include display-flex-center;
       padding: 12.3rem;
       box-shadow: 0 0.4rem 6rem rgba(0, 0, 0, 0.05);
@@ -38,7 +38,7 @@
         top: 6rem;
         width: 18.8rem;
         height: 18.8rem;
-        background-color: #6154f2;
+        background-color: $primary-color;
         border-radius: 8% 50% 50% 50%;
       }
 
@@ -48,7 +48,7 @@
         bottom: 1.7rem;
         width: 18.8rem;
         height: 18.8rem;
-        background-color: #6154f2;
+        background-color: $primary-color;
         border-radius: 50% 8% 50% 50%;
       }
     }
