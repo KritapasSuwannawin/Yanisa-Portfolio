@@ -121,12 +121,13 @@ function Home() {
         </div>
       </div>
       <div className="home-contact">
-        <form className="container" method="POST" data-netlify="true">
+        <form className="container" method="post" name="contact">
+          <input type="hidden" name="form-name" value="contact"></input>
           <p className="title">Contact me for more details</p>
           <p className="content">
             If you have any question, please feel free to leave your email and question!<br></br>I will response as soon as possible.
           </p>
-          <input placeholder="Enter your e-mail address" className="email-input" name="email"></input>
+          <input type="email" placeholder="Enter your e-mail address" className="email-input" name="email"></input>
           <textarea placeholder="Enter your messages" className="message-input" name="message"></textarea>
           <button type="submit" className="button">
             Submit
