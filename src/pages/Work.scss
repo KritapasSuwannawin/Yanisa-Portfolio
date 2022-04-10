@@ -5,7 +5,7 @@
   overflow-x: hidden;
 
   .container {
-    max-width: calc($max-width + 14rem);
+    max-width: $max-width + 14rem;
     padding: 0 10rem 6.5rem 10rem;
     margin: 0 auto;
     @include display-flex-center;
