@@ -16,4 +16,9 @@ html {
 body {
   font-family: 'Nunito Sans', sans-serif;
   box-sizing: border-box;
+
+  ::selection {
+    color: #fff;
+    background-color: #9d94ff;
+  }
 }

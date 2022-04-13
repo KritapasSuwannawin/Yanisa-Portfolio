@@ -35,8 +35,15 @@
 
       .nav-link {
         text-decoration: none;
-        color: rgba(250, 250, 250, 0.8);
+        color: currentColor;
+        padding-bottom: 0.5rem;
+        border-bottom: 0.2rem solid transparent;
+        margin-top: 0.5rem;
         z-index: 2;
+
+        &:hover {
+          border-bottom: 0.2rem solid currentColor;
+        }
       }
     }
   }

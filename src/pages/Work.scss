@@ -81,6 +81,11 @@
         margin: 4.13rem auto 0 auto;
         display: block;
         text-decoration: none;
+        transition: background-color 0.2s;
+
+        &:hover {
+          background-color: darken($color: $secondary-color, $amount: 3);
+        }
       }
     }
   }
