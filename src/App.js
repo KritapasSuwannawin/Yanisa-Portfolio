@@ -3,6 +3,7 @@ import { Route, Redirect } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
+import { getStorage, ref, getDownloadURL } from 'firebase/storage';
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -23,6 +24,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const firestore = getFirestore(app);
+const storage = getStorage();
 
 function App() {
   const dispatch = useDispatch();
@@ -42,9 +44,9 @@ function App() {
       }
 
       const querySnapshotArr = await Promise.all([
-        await getDocs(collection(firestore, 'home')),
-        await getDocs(collection(firestore, 'work')),
-        await getDocs(collection(firestore, 'certificate')),
+        getDocs(collection(firestore, 'home')),
+        getDocs(collection(firestore, 'work')),
+        getDocs(collection(firestore, 'certificate')),
       ]);
 
       const dataArr = querySnapshotArr.map((querySnapshot) => {
@@ -58,6 +60,13 @@ function App() {
 
         return data;
       });
+
+      for (let i = 0; i < dataArr.length; i++) {
+        const url = await Promise.all(dataArr[i].map((obj) => getDownloadURL(ref(storage, obj.img_path))));
+        dataArr[i].forEach((obj, i) => {
+          obj.img_url = url[i];
+        });
+      }
 
       dispatch(dataActions.initializeState(dataArr));
     })();
