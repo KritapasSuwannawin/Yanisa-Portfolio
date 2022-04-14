@@ -1,0 +1,139 @@
+home
+  id 1
+  section works
+  link_to ux-ui-design
+  img_path home/works/ui.png
+  name UX UI Designs
+  see_more_href https://drive.google.com/drive/folders/1DHzRECzvAus7T0evka-v0vQgkWmzIYsu?usp=sharing
+  
+  id 2
+  section works
+  link_to poster
+  img_path home/works/poster.png
+  name Poster
+  see_more_href https://drive.google.com/drive/folders/1gstK2jdcajG2Ijb1fuIjlQVe9sC9x91C?usp=sharing
+
+  id 3
+  section works
+  link_to short-video
+  img_path home/works/short-video.png
+  name Short Video
+  see_more_href https://drive.google.com/drive/folders/1heI6fgS977MRMW1KZ_9aijtothnrh8G9?usp=sharing
+
+  id 4
+  section works
+  link_to gif
+  img_path home/works/gif.gif
+  name GIF
+  see_more_href https://drive.google.com/drive/folders/1h0HFFXJ8l_NYjK5msf-EhhXTIBkhxbaL?usp=sharing
+
+  id 5
+  section works
+  link_to graphic-contents
+  img_path home/works/graphic.png
+  name Graphic Contents
+  see_more_href https://drive.google.com/drive/folders/1jEWDQeO8v6s3KERd1kCnjAHLHMTk_37u?usp=sharing
+
+  id 6
+  section works
+  link_to others
+  img_path home/works/other.gif
+  name Others
+  see_more_href https://drive.google.com/drive/folders/1gFqDqySL6EubzV78XEcjHOC3y4KPcAgR?usp=sharing
+
+work
+  id 1
+  section ux-ui-design
+  href https://www.figma.com/file/Wh24nUzbjHJAz56U4bX2AU/Yanisa's-Portfolio?node-id=0%3A1
+  img_path work/ux-ui-design/ui1.png
+  is_long_img true
+  desc Figma
+
+  id 2
+  section ux-ui-design
+  href https://xd.adobe.com/view/976e1396-a34c-43e6-b5fd-af08aa81a608-c23d/
+  img_path work/ux-ui-design/ui2.png
+  is_long_img true
+  desc Adobe XD
+
+  id 1
+  section poster
+  img_path work/poster/p1.png
+  is_long_img false
+
+  id 2
+  section poster
+  img_path work/poster/p2.png
+  is_long_img false
+
+  id 3
+  section poster
+  img_path work/poster/p3.png
+  is_long_img false
+
+  id 1
+  section short-video
+  href https://drive.google.com/file/d/1HfYOxTglZVdKRX69NFMOUBqHmoowWtcT/view?usp=sharing
+  img_path work/short-video/v1.png
+  is_long_img true
+
+  id 2
+  section short-video
+  href https://drive.google.com/file/d/1cTO2n_WVd0y_anhNVkkABb6GwwHLel0w/view?usp=sharing
+  img_path work/short-video/v2.png
+  is_long_img true
+
+  id 1
+  section gif
+  img_path work/gif/g1.gif
+  is_long_img false
+
+  id 2
+  section gif
+  img_path work/gif/g2.gif
+  is_long_img false
+
+  id 3
+  section gif
+  img_path work/gif/g3.gif
+  is_long_img false
+
+  id 1
+  section graphic-contents
+  img_path work/graphic-contents/gr1.jpg
+  is_long_img false
+
+  id 2
+  section graphic-contents
+  img_path work/graphic-contents/gr2.png
+  is_long_img false
+
+  id 3
+  section graphic-contents
+  img_path work/graphic-contents/gr3.png
+  is_long_img false
+
+  id 1
+  section others
+  img_path work/others/o1.png
+  is_long_img false
+
+  id 2
+  section others
+  img_path work/others/o2.png
+  is_long_img false
+
+  id 3
+  section others
+  img_path work/others/o3.png
+  is_long_img false
+
+certificate
+  id 1
+  img_path certificate/c1.jpg
+
+  id 2
+  img_path certificate/c2.jpg
+
+  id 3
+  img_path certificate/c3.jpg
