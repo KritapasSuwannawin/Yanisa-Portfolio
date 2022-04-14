@@ -1,19 +1,19 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import NavBar from '../components/NavBar';
 import './Certificate.scss';
 
 import certificate from '../picture/certificate/certificate.png';
-import c1 from '../picture/certificate/c1.jpg';
-import c2 from '../picture/certificate/c2.jpg';
-import c3 from '../picture/certificate/c3.jpg';
 
 function Certificate() {
   const dataCertificate = useSelector((store) => store.data.dataCertificate);
 
+  const [certificateUI, setCertificateUI] = useState([]);
+
   useEffect(() => {
-    console.log(dataCertificate);
+    const certificateUI = dataCertificate.map((obj) => <img key={obj.id} src={obj.img_url} alt="" className="picture"></img>);
+    setCertificateUI(certificateUI);
   }, [dataCertificate]);
 
   return (
@@ -22,9 +22,7 @@ function Certificate() {
       <div className="container">
         <div className="main">
           <img src={certificate} alt="" className="title"></img>
-          <img src={c1} alt="" className="picture"></img>
-          <img src={c2} alt="" className="picture"></img>
-          <img src={c3} alt="" className="picture"></img>
+          {certificateUI}
         </div>
       </div>
     </div>

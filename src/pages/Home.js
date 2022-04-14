@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
@@ -14,18 +14,20 @@ import welcome from '../picture/home/welcome.png';
 import profile from '../picture/home/profile.png';
 import project1 from '../picture/home/project-1.png';
 import project2 from '../picture/home/project-2.png';
-import ui from '../picture/home/ui.png';
-import poster from '../picture/home/poster.png';
-import shortVideo from '../picture/home/short-video.png';
-import gif from '../picture/home/gif.gif';
-import graphic from '../picture/home/graphic.png';
-import other from '../picture/home/other.gif';
 
 function Home() {
   const dataHome = useSelector((store) => store.data.dataHome);
 
+  const [workCategoryUI, setWorkCategoryUI] = useState([]);
+
   useEffect(() => {
-    console.log(dataHome);
+    const workCategoryUI = dataHome.map((obj) => (
+      <HashLink key={obj.id} to={`/works#${obj.link_to}`} className="category">
+        <img src={obj.img_url} alt="" className="bubble"></img>
+        <p className="name">{obj.name}</p>
+      </HashLink>
+    ));
+    setWorkCategoryUI(workCategoryUI);
   }, [dataHome]);
 
   return (
@@ -72,30 +74,7 @@ function Home() {
           </HashLink>
         </div>
         <div className="main">
-          <HashLink to="/works#ux-ui-design" className="category">
-            <img src={ui} alt="" className="bubble"></img>
-            <p className="name">UX UI Designs</p>
-          </HashLink>
-          <HashLink to="/works#poster" className="category">
-            <img src={poster} alt="" className="bubble"></img>
-            <p className="name">Poster</p>
-          </HashLink>
-          <HashLink to="/works#short-video" className="category">
-            <img src={shortVideo} alt="" className="bubble"></img>
-            <p className="name">Short Video</p>
-          </HashLink>
-          <HashLink to="/works#gif" className="category">
-            <img src={gif} alt="" className="bubble"></img>
-            <p className="name">GIF</p>
-          </HashLink>
-          <HashLink to="/works#graphic-contents" className="category">
-            <img src={graphic} alt="" className="bubble"></img>
-            <p className="name">Graphic Contents</p>
-          </HashLink>
-          <HashLink to="/works#others" className="category">
-            <img src={other} alt="" className="bubble"></img>
-            <p className="name">Others</p>
-          </HashLink>
+          {workCategoryUI}
           <HashLink to="/works#works" className="button">
             See All Works
           </HashLink>
