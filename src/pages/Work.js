@@ -1,8 +1,10 @@
+import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+
 import NavBar from '../components/NavBar';
 import './Work.scss';
 
 import work from '../picture/work/work.png';
-
 import ui1 from '../picture/work/UI/ui1.png';
 import ui2 from '../picture/work/UI/ui2.png';
 import p1 from '../picture/work/Poster/p1.png';
@@ -21,6 +23,13 @@ import o2 from '../picture/work/Others/o2.png';
 import o3 from '../picture/work/Others/o3.png';
 
 function Work() {
+  const dataHome = useSelector((store) => store.data.dataHome);
+  const dataWork = useSelector((store) => store.data.dataWork);
+
+  useEffect(() => {
+    console.log(dataHome, dataWork);
+  }, [dataHome, dataWork]);
+
   return (
     <div className="work">
       <NavBar color="#6154F2"></NavBar>

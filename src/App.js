@@ -1,4 +1,6 @@
+import { useEffect } from 'react';
 import { Route, Redirect } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
 
@@ -7,6 +9,8 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Certificate from './pages/Certificate';
 import Work from './pages/Work';
+
+import { dataActions } from './store/dataSlice';
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_firebase_apiKey,
@@ -20,41 +24,45 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const firestore = getFirestore(app);
 
-async function getFirestoreData() {
-  function compare(a, b) {
-    if (a.id < b.id) {
-      return -1;
-    }
-
-    if (a.id > b.id) {
-      return 1;
-    }
-
-    return 0;
-  }
-
-  const querySnapshotArr = await Promise.all([
-    await getDocs(collection(firestore, 'home')),
-    await getDocs(collection(firestore, 'work')),
-    await getDocs(collection(firestore, 'certificate')),
-  ]);
-
-  const dataArr = querySnapshotArr.map((querySnapshot) => {
-    const data = [];
-
-    querySnapshot.forEach((doc) => {
-      data.push(doc.data());
-    });
-
-    data.sort(compare);
-
-    return data;
-  });
-
-  return dataArr;
-}
-
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    (async function () {
+      function compare(a, b) {
+        if (a.id < b.id) {
+          return -1;
+        }
+
+        if (a.id > b.id) {
+          return 1;
+        }
+
+        return 0;
+      }
+
+      const querySnapshotArr = await Promise.all([
+        await getDocs(collection(firestore, 'home')),
+        await getDocs(collection(firestore, 'work')),
+        await getDocs(collection(firestore, 'certificate')),
+      ]);
+
+      const dataArr = querySnapshotArr.map((querySnapshot) => {
+        const data = [];
+
+        querySnapshot.forEach((doc) => {
+          data.push(doc.data());
+        });
+
+        data.sort(compare);
+
+        return data;
+      });
+
+      dispatch(dataActions.initializeState(dataArr));
+    })();
+  }, [dispatch]);
+
   return (
     <div>
       <Route exact path="/">

@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -20,6 +22,12 @@ import graphic from '../picture/home/graphic.png';
 import other from '../picture/home/other.gif';
 
 function Home() {
+  const dataHome = useSelector((store) => store.data.dataHome);
+
+  useEffect(() => {
+    console.log(dataHome);
+  }, [dataHome]);
+
   return (
     <div className="home">
       <NavBar color="#6154f2"></NavBar>

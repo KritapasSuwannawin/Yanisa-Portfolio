@@ -1,3 +1,6 @@
+import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+
 import NavBar from '../components/NavBar';
 import './Certificate.scss';
 
@@ -7,6 +10,12 @@ import c2 from '../picture/certificate/c2.jpg';
 import c3 from '../picture/certificate/c3.jpg';
 
 function Certificate() {
+  const dataCertificate = useSelector((store) => store.data.dataCertificate);
+
+  useEffect(() => {
+    console.log(dataCertificate);
+  }, [dataCertificate]);
+
   return (
     <div className="certificate">
       <NavBar color="#6154F2"></NavBar>
