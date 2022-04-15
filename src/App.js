@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Route, Redirect } from 'react-router-dom';
+import { Route, Redirect, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
@@ -61,19 +61,17 @@ function App() {
         return data;
       });
 
-      for (let i = 0; i < dataArr.length; i++) {
-        const url = await Promise.all(dataArr[i].map((obj) => getDownloadURL(ref(storage, obj.img_path))));
-        dataArr[i].forEach((obj, i) => {
-          obj.img_url = url[i];
-        });
-      }
-
       dispatch(dataActions.initializeState(dataArr));
+
+      dataArr.forEach(async (arr, i) => {
+        const url = await Promise.all(arr.map((obj) => getDownloadURL(ref(storage, obj.img_path))));
+        dispatch(dataActions.setImgUrl({ url, i }));
+      });
     })();
   }, [dispatch]);
 
   return (
-    <div>
+    <Switch>
       <Route exact path="/">
         <Home></Home>
       </Route>
@@ -92,7 +90,7 @@ function App() {
       <Route path="/">
         <Redirect to="/"></Redirect>
       </Route>
-    </div>
+    </Switch>
   );
 }
 
