@@ -56,6 +56,13 @@ work
   is_long_img true
   desc Adobe XD
 
+  id 3
+  section ux-ui-design
+  href https://www.figma.com/file/VIFBsk5SgSsF2Kbosb3m1V/Jewelry-E-commerce-website?node-id=0%3A1
+  img_path work/ux-ui-design/ui3.png
+  is_long_img true
+  desc Figma
+
   id 1
   section poster
   img_path work/poster/p1.png

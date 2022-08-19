@@ -31,7 +31,7 @@ function About() {
             <ul>
               <li className="sub-title">E D U C A T I O N</li>
               <p className="content">
-                Computer Engineering (3rd year)<br></br>Specialization: AI & Machine Learning
+                Computer Engineering (4th year)<br></br>Specialization: AI & Machine Learning
               </p>
               <p className="content">
                 Sirindhorn International Institute of Technology<br></br>Thammasat University<br></br>
