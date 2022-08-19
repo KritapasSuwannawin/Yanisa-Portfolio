@@ -7,5 +7,8 @@ Framework and tools used include:
 - React.js
 - React Router
 - Sass
+- Firebase
+  - Firestore
+  - Storage
 
 The website can be accessed at https://ysnyanisa.com
