@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedinIn, faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
@@ -129,11 +129,14 @@ function Home() {
         </p>
         <p className="content">A passionate graphic and web designer</p>
         <div className="button-container">
-          <a href="https://www.facebook.com/yanisa.new.10" target="_blank" rel="noreferrer" className="button">
-            <FontAwesomeIcon icon={faFacebookF} />
-          </a>
           <a href="mailto:yanisa.18n@gmail.com" className="button">
             <FontAwesomeIcon icon={faEnvelope} />
+          </a>
+          <a href="https://www.linkedin.com/in/yanisa-bhisitcharoentat" target="_blank" rel="noreferrer" className="button">
+            <FontAwesomeIcon icon={faLinkedinIn} />
+          </a>
+          <a href="https://www.facebook.com/yanisa.new.10" target="_blank" rel="noreferrer" className="button">
+            <FontAwesomeIcon icon={faFacebookF} />
           </a>
           <a href="https://www.instagram.com/neyinu8" target="_blank" rel="noreferrer" className="button">
             <FontAwesomeIcon icon={faInstagram} />

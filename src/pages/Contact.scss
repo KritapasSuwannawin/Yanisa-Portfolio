@@ -26,9 +26,11 @@
       }
 
       .content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5rem;
         font-weight: 600;
         font-size: 3rem;
-        line-height: 4.1rem;
         color: #000;
       }
 
@@ -61,6 +63,10 @@
       .main {
         margin-right: 5rem;
         margin-left: 5rem;
+
+        .content {
+          font-size: 2.8rem;
+        }
       }
     }
   }
@@ -79,7 +85,8 @@
         border-radius: 10rem 5rem 10rem 10rem;
 
         .content {
-          font-size: 2.5rem;
+          font-size: 2.1rem;
+          row-gap: 4rem;
         }
 
         .right-bubble,
@@ -99,9 +106,15 @@
       padding-left: 5rem;
 
       .main {
+        padding: 7.5rem;
+
         .contact-me {
           width: 40rem;
           left: calc(50% - 20rem);
+        }
+
+        .content {
+          font-size: 1.5rem;
         }
 
         .right-bubble {

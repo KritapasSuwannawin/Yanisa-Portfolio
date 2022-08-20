@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Route, Redirect, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { initializeApp } from 'firebase/app';
-import { getFirestore, collection, getDocs } from 'firebase/firestore';
+import { getFirestore, collection, getDocs, doc, getDoc, updateDoc } from 'firebase/firestore';
 import { getStorage, ref, getDownloadURL } from 'firebase/storage';
 
 import Home from './pages/Home';
@@ -28,6 +28,21 @@ const storage = getStorage();
 
 function App() {
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    (async function () {
+      const docRef = doc(firestore, 'statistic', 'website');
+      const docSnap = await getDoc(docRef);
+
+      if (docSnap.exists()) {
+        const { view_count } = docSnap.data();
+
+        updateDoc(docRef, {
+          view_count: view_count + 1,
+        });
+      }
+    })();
+  }, []);
 
   useEffect(() => {
     (async function () {
