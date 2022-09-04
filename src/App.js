@@ -31,6 +31,10 @@ function App() {
 
   useEffect(() => {
     (async function () {
+      if (window.location.hostname === 'localhost') {
+        return;
+      }
+
       const docRef = doc(firestore, 'statistic', 'website');
       const docSnap = await getDoc(docRef);
 
