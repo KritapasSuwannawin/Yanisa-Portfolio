@@ -1,7 +1,7 @@
-import NavBar from '../components/NavBar';
+import NavBar from '../../components/navBar/NavBar';
 import './Contact.scss';
 
-import contactMe from '../picture/contact/contact-me.png';
+const contactMe = process.env.REACT_APP_storageURL + 'others/contact/contact-me.png'.replaceAll('/', '%2F') + '?alt=media';
 
 function Contact() {
   return (

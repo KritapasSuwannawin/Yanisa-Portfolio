@@ -6,14 +6,14 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
-import NavBar from '../components/NavBar';
+import NavBar from '../../components/navBar/NavBar';
 import './Home.scss';
 
-import webLion from '../picture/home/lion-web.png';
-import welcome from '../picture/home/welcome.png';
-import profile from '../picture/home/profile.png';
-import project1 from '../picture/home/project-1.png';
-import project2 from '../picture/home/project-2.png';
+const webLion = process.env.REACT_APP_storageURL + 'others/home/lion-web.png'.replaceAll('/', '%2F') + '?alt=media';
+const welcome = process.env.REACT_APP_storageURL + 'others/home/welcome.png'.replaceAll('/', '%2F') + '?alt=media';
+const profile = process.env.REACT_APP_storageURL + 'others/home/profile.png'.replaceAll('/', '%2F') + '?alt=media';
+const project1 = process.env.REACT_APP_storageURL + 'others/home/project-1.png'.replaceAll('/', '%2F') + '?alt=media';
+const project2 = process.env.REACT_APP_storageURL + 'others/home/project-2.png'.replaceAll('/', '%2F') + '?alt=media';
 
 function Home() {
   const dataHome = useSelector((store) => store.data.dataHome);

@@ -1,4 +1,4 @@
-@import '../scss/main.scss';
+@import '../../scss/main.scss';
 
 .home {
   background-color: $background-color;
@@ -15,7 +15,6 @@
       max-width: $max-width;
       padding: 0 10rem;
       margin: 0 auto;
-      min-height: calc(100vh - 27.08rem);
       @include display-flex-between;
 
       .main {
@@ -523,6 +522,16 @@
   }
 }
 
+@media (max-width: calc(1920px / 0.9)) and (min-width: 1000px) {
+  .home {
+    .home-hero {
+      .container {
+        min-height: calc(100vh - 27.08rem);
+      }
+    }
+  }
+}
+
 @media (max-width: 1500px) {
   .home {
     .home-hero {
@@ -598,8 +607,6 @@
 @media (max-width: 1000px) {
   .home {
     .home-hero {
-      min-height: unset;
-
       .container {
         .main {
           flex-direction: column;

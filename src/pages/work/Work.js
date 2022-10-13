@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
-import NavBar from '../components/NavBar';
+import NavBar from '../../components/navBar/NavBar';
 import './Work.scss';
 
-import work from '../picture/work/work.png';
+const work = process.env.REACT_APP_storage_URL + 'others/work/work.png'.replaceAll('/', '%2F') + '?alt=media';
 
 function Work() {
   const dataHome = useSelector((store) => store.data.dataHome);

@@ -1,12 +1,12 @@
-import NavBar from '../components/NavBar';
+import NavBar from '../../components/navBar/NavBar';
 import './About.scss';
 
-import ps from '../picture/about/ps.png';
-import xd from '../picture/about/xd.png';
-import figma from '../picture/about/figma.png';
-import canva from '../picture/about/canva.png';
-import aboutMe from '../picture/about/about-me.png';
-import profile from '../picture/about/profile.png';
+const ps = process.env.REACT_APP_storageURL + 'others/about/ps.png'.replaceAll('/', '%2F') + '?alt=media';
+const xd = process.env.REACT_APP_storageURL + 'others/about/xd.png'.replaceAll('/', '%2F') + '?alt=media';
+const figma = process.env.REACT_APP_storageURL + 'others/about/figma.png'.replaceAll('/', '%2F') + '?alt=media';
+const canva = process.env.REACT_APP_storageURL + 'others/about/canva.png'.replaceAll('/', '%2F') + '?alt=media';
+const aboutMe = process.env.REACT_APP_storageURL + 'others/about/about-me.png'.replaceAll('/', '%2F') + '?alt=media';
+const profile = process.env.REACT_APP_storageURL + 'others/about/profile.png'.replaceAll('/', '%2F') + '?alt=media';
 
 function About() {
   return (

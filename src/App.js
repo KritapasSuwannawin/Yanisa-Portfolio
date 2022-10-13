@@ -5,11 +5,11 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs, doc, getDoc, updateDoc } from 'firebase/firestore';
 import { getStorage, ref, getDownloadURL } from 'firebase/storage';
 
-import Home from './pages/Home';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Certificate from './pages/Certificate';
-import Work from './pages/Work';
+import Home from './pages/home/Home';
+import About from './pages/about/About';
+import Contact from './pages/contact/Contact';
+import Certificate from './pages/certificate/Certificate';
+import Work from './pages/work/Work';
 
 import { dataActions } from './store/dataSlice';
 
