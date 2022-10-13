@@ -46,6 +46,16 @@
         }
       }
     }
+
+    .nav-menu {
+      display: none;
+    }
+  }
+
+  .nav-sidebar {
+    display: none;
+    transform: translateX(25rem);
+    transition: transform 0.2s ease;
   }
 }
 
@@ -62,6 +72,108 @@
 
       .nav-right {
         font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .nav-bar {
+    .nav-container {
+      padding: 3.5rem 2.5rem 3.5rem 3rem;
+
+      .nav-left {
+        .nav-name {
+          font-size: 2rem;
+        }
+      }
+
+      .nav-right {
+        display: none;
+      }
+
+      .nav-menu {
+        display: block;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        row-gap: 0.675rem;
+        padding: 0.5rem;
+        z-index: 3;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        &__line {
+          background-color: #fff;
+          height: 0.25rem;
+          border-radius: 1rem;
+          transition: all 0.2s ease;
+
+          &.top {
+            width: 1.5rem;
+          }
+
+          &.middle {
+            width: 2.25rem;
+          }
+
+          &.bottom {
+            width: 1rem;
+          }
+        }
+
+        &.active {
+          row-gap: 0;
+
+          .nav-menu__line {
+            &.top {
+              width: 2rem;
+              transform: translateY(0.125rem) rotate(135deg);
+            }
+
+            &.middle {
+              width: 0;
+              height: 0;
+              transition: all 0.05s ease;
+            }
+
+            &.bottom {
+              width: 2rem;
+              transform: translateY(-0.125rem) rotate(-135deg);
+            }
+          }
+        }
+      }
+    }
+
+    .nav-sidebar {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100vh;
+      width: 25rem;
+      padding-top: 10rem;
+      padding-right: 2.5rem;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+      row-gap: 2rem;
+      z-index: 2;
+      font-size: 2rem;
+
+      &.active {
+        transform: translateX(0);
+      }
+
+      &__link {
+        text-decoration: none;
+        color: currentColor;
+        padding: 0.5rem;
       }
     }
   }

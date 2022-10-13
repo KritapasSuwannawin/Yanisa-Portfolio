@@ -1,6 +1,7 @@
 @import '../../scss/main.scss';
 
 .work {
+  min-height: 100vh;
   background-color: $background-color;
   overflow-x: hidden;
 
@@ -36,6 +37,7 @@
 
         .long-pic {
           width: 50rem;
+          max-width: 100%;
           background-color: #fff;
           border-radius: 1rem;
 
@@ -56,6 +58,7 @@
 
         .short-pic {
           width: 40rem;
+          max-width: 100%;
           background-color: #fff;
           border-radius: 1rem;
         }
@@ -102,6 +105,28 @@
           .long-pic {
             width: 40rem;
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .work {
+    .container {
+      padding-right: 2.5rem;
+      padding-left: 2.5rem;
+      padding-bottom: 2.5rem;
+      margin-top: -2rem;
+
+      .section {
+        .sub-title {
+          font-size: 3.2rem;
+          text-align: center;
+        }
+
+        .button {
+          margin-bottom: 5rem;
         }
       }
     }

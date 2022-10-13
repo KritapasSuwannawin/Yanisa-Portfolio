@@ -37,6 +37,10 @@
             font-size: 1.8rem;
             line-height: 180%;
             margin-top: 1.7rem;
+
+            &.mobile {
+              display: none;
+            }
           }
 
           .button {
@@ -217,11 +221,12 @@
         font-size: 1.8rem;
         line-height: 180%;
         color: #fff;
-        padding: 1.5rem 4rem;
+        padding: 1.5rem 4.3rem;
         background-color: $primary-color;
         box-shadow: 0 0.4rem 6rem rgba(0, 0, 0, 0.05);
         border-radius: 1rem;
         display: none;
+        text-decoration: none;
         transition: background-color 0.2s;
 
         &:hover {
@@ -356,7 +361,7 @@
       margin: 0 auto;
       background-color: $secondary-color;
       box-shadow: 0 0.4rem 6rem rgba(0, 0, 0, 0.05);
-      padding: 3.2rem 5.5rem 2.8rem 5.5rem;
+      padding: 5rem 5.5rem 5rem 5.5rem;
       border-radius: 20rem 5rem 20rem 10rem;
       position: relative;
 
@@ -483,6 +488,10 @@
       color: #383e44;
       text-align: center;
 
+      br {
+        display: none;
+      }
+
       .bold {
         font-weight: 800;
       }
@@ -608,9 +617,15 @@
   .home {
     .home-hero {
       .container {
+        justify-content: center;
+
         .main {
           flex-direction: column;
           row-gap: 15rem;
+
+          .left {
+            margin-right: 0;
+          }
 
           .right {
             .bubble {
@@ -665,6 +680,20 @@
           .bubble-container-bottom-right {
             border-radius: 20.39vw 10% 14.4vw 11.98vw;
             padding: 2.62vw 2.62vw 0 2.62vw;
+          }
+        }
+      }
+
+      .right {
+        margin-left: 0;
+      }
+    }
+
+    .home-contact {
+      .container {
+        .content {
+          br {
+            display: none;
           }
         }
       }
@@ -746,6 +775,164 @@
         .button {
           font-size: 1.6rem;
           padding: 1.33rem 4.8rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .home {
+    .home-hero {
+      .container {
+        padding: 0 3rem;
+        .main {
+          row-gap: 10rem;
+
+          .left {
+            .title {
+              font-size: 2.6rem;
+
+              .space {
+                display: none;
+              }
+            }
+
+            .content {
+              display: none;
+              font-size: 1.4rem;
+
+              &.mobile {
+                display: block;
+              }
+            }
+
+            .button {
+              font-size: 1.8rem;
+              width: 100%;
+              text-align: center;
+              padding: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+
+    .home-work {
+      padding: 0 2.5rem;
+
+      .nav {
+        margin-bottom: 5rem;
+
+        .title {
+          font-size: 3.2rem;
+        }
+      }
+
+      .main {
+        .category {
+          .bubble {
+            width: 28.5rem;
+            height: 28.5rem;
+          }
+
+          .name {
+            font-size: 1.8rem;
+            margin: 2.5rem 0 3rem 0;
+          }
+        }
+
+        .button {
+          font-size: 1.8rem;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    .home-project {
+      padding: 0 2.5rem;
+      margin-top: 12rem;
+      row-gap: 6.5rem;
+
+      .right {
+        .title {
+          font-size: 3.2rem;
+        }
+
+        .content {
+          font-size: 1.8rem;
+        }
+
+        .button {
+          font-size: 1.8rem;
+          padding: 1.5rem 4rem;
+        }
+      }
+    }
+
+    .home-contact {
+      padding-top: 10rem;
+
+      .container {
+        padding: 5.5rem 3.2rem;
+
+        .title {
+          font-size: 3rem;
+        }
+
+        .content {
+          font-size: 1.8rem;
+        }
+
+        .email-input,
+        .message-input {
+          font-size: 1.4rem;
+        }
+
+        .button {
+          font-size: 1.8rem;
+          width: 100%;
+          padding: 1.5rem;
+        }
+
+        .left-bubble {
+          bottom: 10rem;
+          left: -14rem;
+        }
+
+        .right-bubble {
+          top: 10rem;
+          right: -14rem;
+        }
+      }
+    }
+
+    .home-footer {
+      margin-top: 10rem;
+      padding-left: 3.5rem;
+
+      .title {
+        font-size: 2.6rem;
+        text-align: left;
+
+        br {
+          display: block;
+        }
+      }
+
+      .content {
+        font-size: 1.6rem;
+        text-align: left;
+        margin-top: 1.5rem;
+      }
+
+      .button-container {
+        justify-content: flex-start;
+        margin-top: 5rem;
+
+        .button {
+          width: 4rem;
+          height: 4rem;
         }
       }
     }

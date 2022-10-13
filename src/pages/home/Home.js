@@ -32,13 +32,16 @@ function Home() {
 
   return (
     <div className="home">
-      <NavBar color="#6154f2"></NavBar>
+      <NavBar color="#6154F2"></NavBar>
       <div className="home-hero">
         <div className="container">
           <div className="main">
             <div className="left">
               <p className="title">
-                Yanisa <span className="no-wrap">Bhisitcharoentat ,</span>
+                Yanisa{' '}
+                <span className="no-wrap">
+                  Bhisitcharoentat<span className="space"> </span>,
+                </span>
                 <br></br>
                 Graphic Designer &<br></br>
                 UX UI Designer
@@ -46,6 +49,9 @@ function Home() {
               <p className="content">
                 “ How well we communicate is determined not by<br></br>
                 how well we say things, but how well we are understood. ”<br></br>- Andrew Grove
+              </p>
+              <p className="content mobile">
+                “ The best way to predict the future is to create it ”<br></br>- Abraham Lincoln
               </p>
               <Link to="/contact" className="button">
                 Contact Me
@@ -98,9 +104,7 @@ function Home() {
             Available and<br></br>Ready for Project!
           </p>
           <p className="content">
-            If you are looking for someone who is adaptive,<br></br>
-            fast-learning, and problem-solving.<br></br>
-            I’m the right fit for you :-)
+            If you are looking for someone who is adaptive, fast-learning, and problem-solving. I’m the right fit for you :-)
           </p>
           <a href="mailto:yanisa.18n@gmail.com" className="button">
             Send Inquiry
@@ -112,7 +116,7 @@ function Home() {
           <input type="hidden" name="form-name" value="contact"></input>
           <p className="title">Contact me for more details</p>
           <p className="content">
-            If you have any question, please feel free to leave your email and question!<br></br>I will response as soon as possible.
+            If you have any question, please feel free to leave your email and question!<br></br> I will response as soon as possible.
           </p>
           <input type="email" placeholder="Enter your e-mail address" className="email-input" name="email"></input>
           <textarea placeholder="Enter your messages" className="message-input" name="message"></textarea>
@@ -125,7 +129,7 @@ function Home() {
       </div>
       <div className="home-footer">
         <p className="title">
-          <span className="bold">Yanisa</span> New
+          <span className="bold">Yanisa</span> <br></br>New
         </p>
         <p className="content">A passionate graphic and web designer</p>
         <div className="button-container">

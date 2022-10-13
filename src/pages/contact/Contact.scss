@@ -124,3 +124,36 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .contact {
+    .container {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+
+      .main {
+        margin-top: 13rem;
+        padding: 6rem 4rem;
+        border-radius: 9em 4.5rem 9em 9em;
+        width: 100%;
+
+        .contact-me {
+          width: 30rem;
+          left: calc(50% - 15rem);
+          top: -12rem;
+        }
+
+        .content {
+          row-gap: 2.5rem;
+        }
+
+        .left-bubble {
+          left: -13rem;
+        }
+        .right-bubble {
+          right: -13rem;
+        }
+      }
+    }
+  }
+}

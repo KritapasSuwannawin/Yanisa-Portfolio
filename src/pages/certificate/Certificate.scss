@@ -1,6 +1,7 @@
 @import '../../scss/main.scss';
 
 .certificate {
+  min-height: 100vh;
   background-color: $primary-color;
 
   .container {
@@ -31,6 +32,23 @@
   .certificate {
     .container {
       padding: 0 5rem;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .certificate {
+    .container {
+      padding: 0 2.5rem;
+
+      .main {
+        row-gap: 3.5rem;
+        padding-bottom: 5rem;
+
+        .title {
+          margin-bottom: 1.5rem;
+        }
+      }
     }
   }
 }

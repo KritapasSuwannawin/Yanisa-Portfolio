@@ -25,22 +25,16 @@ function About() {
             <div className="overlay"></div>
             <p className="title">
               Yanisa Bhisitcharoentat <span className="no-wrap">( New )</span>
-              <br></br>
-              <br></br>
             </p>
             <ul>
               <li className="sub-title">E D U C A T I O N</li>
               <p className="content">
                 Computer Engineering (4th year)<br></br>Specialization: AI & Machine Learning
               </p>
-              <p className="content">
-                Sirindhorn International Institute of Technology<br></br>Thammasat University<br></br>
-                <br></br>
+              <p className="content margin-bottom">
+                Sirindhorn International Institute of Technology,<br></br>Thammasat University
               </p>
-              <li className="sub-title">
-                S K I L L S<br></br>
-                <br></br>
-              </li>
+              <li className="sub-title">S K I L L S</li>
               <div className="skill">
                 <img src={ps} alt="" className="icon"></img>
                 <p className="name">Adobe Photoshop</p>
