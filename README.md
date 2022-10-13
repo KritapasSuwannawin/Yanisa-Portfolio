@@ -2,12 +2,11 @@
 
 A portfolio website of my personal UX/UI designer.
 
-Framework and tools used include:
+Libraries and Services used include:
 
-- React.js
+- ReactJS
 - React Router
 - Redux Toolkit
-- Sass
 - Firebase
   - Cloud Firestore
   - Cloud Storage

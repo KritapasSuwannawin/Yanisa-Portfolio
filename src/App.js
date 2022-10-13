@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Route, Redirect, Switch } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs, doc, getDoc, updateDoc } from 'firebase/firestore';
@@ -90,26 +90,14 @@ function App() {
   }, [dispatch]);
 
   return (
-    <Switch>
-      <Route exact path="/">
-        <Home></Home>
-      </Route>
-      <Route exact path="/about">
-        <About></About>
-      </Route>
-      <Route exact path="/contact">
-        <Contact></Contact>
-      </Route>
-      <Route exact path="/certificates">
-        <Certificate></Certificate>
-      </Route>
-      <Route exact path="/works">
-        <Work></Work>
-      </Route>
-      <Route path="/">
-        <Redirect to="/"></Redirect>
-      </Route>
-    </Switch>
+    <Routes>
+      <Route path="/" element={<Home></Home>}></Route>
+      <Route path="/about" element={<About></About>}></Route>
+      <Route path="/contact" element={<Contact></Contact>}></Route>
+      <Route path="/certificates" element={<Certificate></Certificate>}></Route>
+      <Route path="/works" element={<Work></Work>}></Route>
+      <Route path="/*" element={<Navigate replace to="/"></Navigate>}></Route>
+    </Routes>
   );
 }
 
