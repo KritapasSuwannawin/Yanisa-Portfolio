@@ -1,9 +1,8 @@
 @import '../../scss/main.scss';
 
 .work {
-  min-height: 100vh;
+  @include page-stype;
   background-color: $background-color;
-  overflow-x: hidden;
 
   .container {
     max-width: $max-width + 14rem;
@@ -94,6 +93,20 @@
   }
 }
 
+@media (max-width: 1000px) {
+  .work {
+    .container {
+      padding-bottom: 2.5rem;
+
+      .section {
+        .button {
+          margin-bottom: 5rem;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 750px) {
   .work {
     .container {
@@ -116,8 +129,7 @@
     .container {
       padding-right: 2.5rem;
       padding-left: 2.5rem;
-      padding-bottom: 2.5rem;
-      margin-top: -2rem;
+      margin-top: -5rem;
 
       .section {
         .sub-title {
@@ -125,8 +137,15 @@
           text-align: center;
         }
 
+        .picture-container {
+          .desc {
+            margin-top: 0.5rem;
+          }
+        }
+
         .button {
-          margin-bottom: 5rem;
+          font-size: 1.6rem;
+          font-weight: 800;
         }
       }
     }

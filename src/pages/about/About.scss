@@ -1,9 +1,8 @@
 @import '../../scss/main.scss';
 
 .about {
-  min-height: 100vh;
+  @include page-stype;
   background-color: $secondary-color;
-  overflow-x: hidden;
 
   .container {
     @include display-flex-between;
@@ -207,7 +206,7 @@
   .about {
     .container {
       padding: 0;
-      margin-top: 10rem;
+      margin-top: 9rem;
 
       .left {
         .bubble {

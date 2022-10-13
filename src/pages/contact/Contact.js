@@ -5,7 +5,7 @@ const contactMe = process.env.REACT_APP_storageURL + 'others/contact/contact-me.
 
 function Contact() {
   return (
-    <div className="contact">
+    <div className="contact" style={{ minHeight: window.innerHeight + 'px' }}>
       <NavBar color="#9D94FF"></NavBar>
       <div className="container">
         <div className="main">

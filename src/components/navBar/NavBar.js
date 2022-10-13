@@ -12,10 +12,13 @@ function NavBar(props) {
     setMenuIsActive((prev) => !prev);
   }
 
+  const root = document.getElementById('root');
   if (menuIsActive) {
-    document.body.style.overflowY = 'hidden';
+    root.style.maxHeight = window.innerHeight + 'px';
+    root.style.overflowY = 'hidden';
   } else {
-    document.body.style.overflowY = 'auto';
+    root.style.maxHeight = 'unset';
+    root.style.overflowY = 'unset';
   }
 
   let sidebarBackgroundColor = '#9d94ff';

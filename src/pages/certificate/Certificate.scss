@@ -1,7 +1,7 @@
 @import '../../scss/main.scss';
 
 .certificate {
-  min-height: 100vh;
+  @include page-stype;
   background-color: $primary-color;
 
   .container {
@@ -47,6 +47,7 @@
 
         .title {
           margin-bottom: 1.5rem;
+          width: 80%;
         }
       }
     }

@@ -1,9 +1,8 @@
 @import '../../scss/main.scss';
 
 .contact {
-  min-height: 100vh;
+  @include page-stype;
   background-color: $tertiary-color;
-  overflow-x: hidden;
 
   .container {
     max-width: $max-width;
@@ -130,16 +129,17 @@
     .container {
       padding-left: 2.5rem;
       padding-right: 2.5rem;
+      padding-bottom: 5rem;
 
       .main {
-        margin-top: 13rem;
+        margin-top: 12rem;
         padding: 6rem 4rem;
         border-radius: 9em 4.5rem 9em 9em;
         width: 100%;
 
         .contact-me {
-          width: 30rem;
-          left: calc(50% - 15rem);
+          width: 28rem;
+          left: calc(50% - 14rem);
           top: -12rem;
         }
 
