@@ -63,6 +63,20 @@ work
   is_long_img true
   desc Figma
 
+  id 4
+  section ux-ui-design
+  href https://www.figma.com/file/ocWdM3PB2u1yhzsCyWkspZ/%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%A2%E0%B8%B7%E0%B9%88%E0%B8%99%E0%B8%84%E0%B8%B3%E0%B8%A3%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B8%82%E0%B8%AD%E0%B8%88%E0%B8%AD%E0%B8%87%E0%B8%AB%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%A1%E0%B8%B7%E0%B8%AD-%E0%B8%AD%E0%B8%AA%E0%B8%A1%E0%B8%97-(UX%2FUI)?node-id=0%3A1
+  img_path work/ux-ui-design/ui4.png
+  is_long_img true
+  desc Figma
+
+  id 5
+  section ux-ui-design
+  href https://www.figma.com/file/tyhxFxWDp02P0qnyjxTuaC/SIIT-Academy?node-id=0%3A1
+  img_path work/ux-ui-design/ui5.png
+  is_long_img true
+  desc Figma
+
   id 1
   section poster
   img_path work/poster/p1.png
@@ -80,7 +94,7 @@ work
 
   id 1
   section short-video
-  href https://drive.google.com/file/d/1HfYOxTglZVdKRX69NFMOUBqHmoowWtcT/view?usp=sharing
+  href https://drive.google.com/file/d/1t4clIcEEibDk_FcVCr9beHTnFGdUQdTK/view?usp=sharing
   img_path work/short-video/v1.png
   is_long_img true
 
@@ -138,9 +152,16 @@ work
 certificate
   id 1
   img_path certificate/c1.jpg
+  href https://www.udemy.com/certificate/UC-9bb04744-ae29-4b71-98c5-df544eee00a6/
 
   id 2
   img_path certificate/c2.jpg
+  herf https://www.udemy.com/certificate/UC-9070e794-98b4-47d5-81fd-fb94ab535d8d/
 
   id 3
   img_path certificate/c3.jpg
+  herf https://www.udemy.com/certificate/UC-27e39dc4-c770-4b85-a865-d59a5371e955/
+
+  id 4
+  img_path certificate/c4.jpg
+  herf https://www.udemy.com/certificate/UC-a8ab9dd7-7030-4ce3-830e-93057b6ec7a7/

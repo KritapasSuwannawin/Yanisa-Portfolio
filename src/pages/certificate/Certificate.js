@@ -12,7 +12,11 @@ function Certificate() {
   const [certificateUI, setCertificateUI] = useState([]);
 
   useEffect(() => {
-    const certificateUI = dataCertificate.map((obj) => <img key={obj.id} src={obj.img_url} alt="" className="picture"></img>);
+    const certificateUI = dataCertificate.map((obj) => (
+      <a href={obj.href} target="_blank" rel="noreferrer">
+        <img key={obj.id} src={obj.img_url} alt="" className="picture"></img>
+      </a>
+    ));
     setCertificateUI(certificateUI);
   }, [dataCertificate]);
 

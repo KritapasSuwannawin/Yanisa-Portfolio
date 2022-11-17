@@ -1,9 +1,11 @@
 import NavBar from '../../components/navBar/NavBar';
 import './About.scss';
 
-const ps = process.env.REACT_APP_storageURL + 'others/about/ps.png'.replaceAll('/', '%2F') + '?alt=media';
-const xd = process.env.REACT_APP_storageURL + 'others/about/xd.png'.replaceAll('/', '%2F') + '?alt=media';
 const figma = process.env.REACT_APP_storageURL + 'others/about/figma.png'.replaceAll('/', '%2F') + '?alt=media';
+const xd = process.env.REACT_APP_storageURL + 'others/about/xd.png'.replaceAll('/', '%2F') + '?alt=media';
+const ps = process.env.REACT_APP_storageURL + 'others/about/ps.png'.replaceAll('/', '%2F') + '?alt=media';
+const ai = process.env.REACT_APP_storageURL + 'others/about/ai.png'.replaceAll('/', '%2F') + '?alt=media';
+const pc = process.env.REACT_APP_storageURL + 'others/about/pc.png'.replaceAll('/', '%2F') + '?alt=media';
 const canva = process.env.REACT_APP_storageURL + 'others/about/canva.png'.replaceAll('/', '%2F') + '?alt=media';
 const aboutMe = process.env.REACT_APP_storageURL + 'others/about/about-me.png'.replaceAll('/', '%2F') + '?alt=media';
 const profile = process.env.REACT_APP_storageURL + 'others/about/profile.png'.replaceAll('/', '%2F') + '?alt=media';
@@ -36,16 +38,24 @@ function About() {
               </p>
               <li className="sub-title">S K I L L S</li>
               <div className="skill">
-                <img src={ps} alt="" className="icon"></img>
-                <p className="name">Adobe Photoshop</p>
+                <img src={figma} alt="" className="icon"></img>
+                <p className="name">Figma</p>
               </div>
               <div className="skill">
                 <img src={xd} alt="" className="icon"></img>
                 <p className="name">Adobe XD</p>
               </div>
               <div className="skill">
-                <img src={figma} alt="" className="icon"></img>
-                <p className="name">Figma</p>
+                <img src={ps} alt="" className="icon"></img>
+                <p className="name">Adobe Photoshop</p>
+              </div>
+              <div className="skill">
+                <img src={ai} alt="" className="icon"></img>
+                <p className="name">Adobe Illustrator</p>
+              </div>
+              <div className="skill">
+                <img src={pc} alt="" className="icon"></img>
+                <p className="name">Procreate</p>
               </div>
               <div className="skill">
                 <img src={canva} alt="" className="icon"></img>
