@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import NavBar from '../../components/navBar/NavBar';
 import './Work.scss';
 
-const work = process.env.REACT_APP_storage_URL + 'others/work/work.png'.replaceAll('/', '%2F') + '?alt=media';
+const work = process.env.REACT_APP_storageURL + 'others/work/work.png'.replaceAll('/', '%2F') + '?alt=media';
 
 function Work() {
   const dataHome = useSelector((store) => store.data.dataHome);

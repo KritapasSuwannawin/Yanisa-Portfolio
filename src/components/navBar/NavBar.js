@@ -12,13 +12,16 @@ function NavBar(props) {
     setMenuIsActive((prev) => !prev);
   }
 
-  const root = document.getElementById('root');
-  if (menuIsActive) {
-    root.style.maxHeight = window.innerHeight + 'px';
-    root.style.overflowY = 'hidden';
-  } else {
-    root.style.maxHeight = 'unset';
-    root.style.overflowY = 'unset';
+  const page = document.getElementById('root').firstElementChild;
+  if (page) {
+    if (menuIsActive) {
+      window.scrollTo(0, 0);
+      page.style.position = 'fixed';
+      page.style.width = '100%';
+    } else {
+      page.style.position = '';
+      page.style.width = '';
+    }
   }
 
   let sidebarBackgroundColor = '#9d94ff';
