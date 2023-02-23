@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 import './NavBar.scss';
 
@@ -41,18 +41,18 @@ function NavBar(props) {
           </Link>
         </div>
         <div className="nav-right">
-          <Link to="/works" className="nav-link">
+          <NavLink to="/works" className={({ isActive }) => 'nav-link' + (isActive ? ' active' : '')}>
             Works
-          </Link>
-          <Link to="/about" className="nav-link">
+          </NavLink>
+          <NavLink to="/about" className={({ isActive }) => 'nav-link' + (isActive ? ' active' : '')}>
             About
-          </Link>
-          <Link to="/certificates" className="nav-link">
+          </NavLink>
+          <NavLink to="/certificates" className={({ isActive }) => 'nav-link' + (isActive ? ' active' : '')}>
             Certificates
-          </Link>
-          <Link to="/contact" className="nav-link">
+          </NavLink>
+          <NavLink to="/contact" className={({ isActive }) => 'nav-link' + (isActive ? ' active' : '')}>
             Contact
-          </Link>
+          </NavLink>
         </div>
         <div className={`nav-menu ${menuIsActive ? 'active' : ''}`} onClick={menuClickHandler}>
           <div className="nav-menu__line top"></div>

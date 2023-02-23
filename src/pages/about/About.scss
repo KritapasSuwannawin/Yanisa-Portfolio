@@ -12,10 +12,7 @@
 
     .left {
       .bubble {
-        width: 40rem;
-        height: 40rem;
-        border-radius: 8% 50% 50% 50%;
-        background-color: $primary-color;
+        @include bubble-style(40rem, 40rem, 8% 50% 50% 50%, $primary-color);
         position: relative;
 
         .about-me {
@@ -35,13 +32,10 @@
         }
 
         .sub-bubble {
+          @include bubble-style(32.5%, 32.5%, 50% 8% 50% 50%, $tertiary-color);
           position: absolute;
           left: -5rem;
           bottom: 0;
-          width: 32.5%;
-          height: 32.5%;
-          border-radius: 50% 8% 50% 50%;
-          background-color: $tertiary-color;
           border: 1px solid rgba(0, 0, 0, 0.2);
         }
       }
@@ -135,8 +129,7 @@
     .container {
       .left {
         .bubble {
-          width: 32vw;
-          height: 32vw;
+          @include bubble-style(32vw, 32vw);
         }
       }
 
@@ -159,8 +152,7 @@
 
       .left {
         .bubble {
-          width: 50vw;
-          height: 50vw;
+          @include bubble-style(50vw, 50vw);
         }
       }
 
@@ -182,8 +174,7 @@
 
       .left {
         .bubble {
-          width: 55vw;
-          height: 55vw;
+          @include bubble-style(55vw, 55vw);
         }
       }
 
@@ -209,8 +200,7 @@
 
       .left {
         .bubble {
-          width: 60vw;
-          height: 60vw;
+          @include bubble-style(60vw, 60vw);
         }
       }
 

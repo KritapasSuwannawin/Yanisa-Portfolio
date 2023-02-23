@@ -6,14 +6,16 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 
+import pathToUrl from '../../utils/pathToUrl';
+
 import NavBar from '../../components/navBar/NavBar';
 import './Home.scss';
 
-const webLion = process.env.REACT_APP_storageURL + 'others/home/lion-web.png'.replaceAll('/', '%2F') + '?alt=media';
-const welcome = process.env.REACT_APP_storageURL + 'others/home/welcome.png'.replaceAll('/', '%2F') + '?alt=media';
-const profile = process.env.REACT_APP_storageURL + 'others/home/profile.png'.replaceAll('/', '%2F') + '?alt=media';
-const project1 = process.env.REACT_APP_storageURL + 'others/home/project-1.png'.replaceAll('/', '%2F') + '?alt=media';
-const project2 = process.env.REACT_APP_storageURL + 'others/home/project-2.png'.replaceAll('/', '%2F') + '?alt=media';
+const webLion = pathToUrl('others/home/lion-web.png');
+const welcome = pathToUrl('others/home/welcome.png');
+const profile = pathToUrl('others/home/profile.png');
+const project1 = pathToUrl('others/home/project-1.png');
+const project2 = pathToUrl('others/home/project-2.png');
 
 function Home() {
   const dataHome = useSelector((store) => store.data.dataHome);
@@ -43,7 +45,8 @@ function Home() {
                   Bhisitcharoentat<span className="space"> </span>,
                 </span>
                 <br></br>
-                UX/UI Designer &<br></br>
+                UX/UI Designer &amp;
+                <br></br>
                 Graphic Designer
               </p>
               <p className="content">
@@ -118,8 +121,8 @@ function Home() {
           <p className="content">
             If you have any question, please feel free to leave your email and question!<br></br> I will response as soon as possible.
           </p>
-          <input type="email" placeholder="Enter your e-mail address" className="email-input" name="email"></input>
-          <textarea placeholder="Enter your messages" className="message-input" name="message"></textarea>
+          <input type="email" placeholder="Enter your email address" className="email-input" name="email" required></input>
+          <textarea placeholder="Enter your messages" className="message-input" name="message" required></textarea>
           <button type="submit" className="button">
             Submit
           </button>

@@ -1,7 +1,9 @@
+import pathToUrl from '../../utils/pathToUrl';
+
 import NavBar from '../../components/navBar/NavBar';
 import './Contact.scss';
 
-const contactMe = process.env.REACT_APP_storageURL + 'others/contact/contact-me.png'.replaceAll('/', '%2F') + '?alt=media';
+const contactMe = pathToUrl('others/contact/contact-me.png');
 
 function Contact() {
   return (

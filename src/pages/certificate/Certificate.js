@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
+import pathToUrl from '../../utils/pathToUrl';
+
 import NavBar from '../../components/navBar/NavBar';
 import './Certificate.scss';
 
-const certificate = process.env.REACT_APP_storageURL + 'others/certificate/certificate.png'.replaceAll('/', '%2F') + '?alt=media';
+const certificate = pathToUrl('others/certificate/certificate.png');
 
 function Certificate() {
   const dataCertificate = useSelector((store) => store.data.dataCertificate);

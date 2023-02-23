@@ -20,3 +20,30 @@
   min-height: 100vh;
   overflow-x: hidden;
 }
+
+@mixin hover-scale-up {
+  transition: all 0.2s;
+
+  &:hover {
+    transform: scale(1.01);
+    box-shadow: 1rem 1rem 5rem 0 rgba(0, 0, 0, 0.05);
+  }
+
+  &:active {
+    transform: scale(1.0075);
+    box-shadow: 1rem 1rem 3rem 0 rgba(0, 0, 0, 0.075);
+  }
+}
+
+@mixin bubble-style($width, $height, $border-radius: 0, $background-color: 0) {
+  width: $width;
+  height: $height;
+
+  @if $border-radius != 0 {
+    border-radius: $border-radius;
+  }
+
+  @if $background-color != 0 {
+    background-color: $background-color;
+  }
+}

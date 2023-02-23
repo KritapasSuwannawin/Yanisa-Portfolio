@@ -1,14 +1,16 @@
+import pathToUrl from '../../utils/pathToUrl';
+
 import NavBar from '../../components/navBar/NavBar';
 import './About.scss';
 
-const figma = process.env.REACT_APP_storageURL + 'others/about/figma.png'.replaceAll('/', '%2F') + '?alt=media';
-const xd = process.env.REACT_APP_storageURL + 'others/about/xd.png'.replaceAll('/', '%2F') + '?alt=media';
-const ps = process.env.REACT_APP_storageURL + 'others/about/ps.png'.replaceAll('/', '%2F') + '?alt=media';
-const ai = process.env.REACT_APP_storageURL + 'others/about/ai.png'.replaceAll('/', '%2F') + '?alt=media';
-const pc = process.env.REACT_APP_storageURL + 'others/about/pc.png'.replaceAll('/', '%2F') + '?alt=media';
-const canva = process.env.REACT_APP_storageURL + 'others/about/canva.png'.replaceAll('/', '%2F') + '?alt=media';
-const aboutMe = process.env.REACT_APP_storageURL + 'others/about/about-me.png'.replaceAll('/', '%2F') + '?alt=media';
-const profile = process.env.REACT_APP_storageURL + 'others/about/profile.png'.replaceAll('/', '%2F') + '?alt=media';
+const figma = pathToUrl('others/about/figma.png');
+const xd = pathToUrl('others/about/xd.png');
+const ps = pathToUrl('others/about/ps.png');
+const ai = pathToUrl('others/about/ai.png');
+const pc = pathToUrl('others/about/pc.png');
+const canva = pathToUrl('others/about/canva.png');
+const aboutMe = pathToUrl('others/about/about-me.png');
+const profile = pathToUrl('others/about/profile.png');
 
 function About() {
   return (

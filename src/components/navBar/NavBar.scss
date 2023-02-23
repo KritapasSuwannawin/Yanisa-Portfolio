@@ -36,10 +36,14 @@
       .nav-link {
         text-decoration: none;
         color: currentColor;
-        padding-bottom: 0.5rem;
+        padding: 0.5rem 0;
         border-bottom: 0.2rem solid transparent;
-        margin-top: 0.5rem;
         z-index: 2;
+        transition: border-bottom 0.2s ease-out;
+
+        &.active {
+          border-bottom: 0.2rem solid currentColor;
+        }
 
         &:hover {
           border-bottom: 0.2rem solid currentColor;

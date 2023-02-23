@@ -58,8 +58,9 @@
             color: #fff;
             transition: background-color 0.2s;
 
-            &:hover {
-              background-color: darken($color: $secondary-color, $amount: 3);
+            &:hover,
+            &:active {
+              background-color: darken($color: $secondary-color, $amount: 3.5);
             }
           }
         }
@@ -68,11 +69,8 @@
           z-index: 1;
 
           .bubble {
-            width: 60rem;
-            height: 60rem;
-            background: $secondary-color;
+            @include bubble-style(60rem, 60rem, 50% 4% 50% 50%, $secondary-color);
             margin-right: -10rem;
-            border-radius: 50% 4% 50% 50%;
             position: relative;
 
             .welcome {
@@ -92,10 +90,7 @@
             }
 
             .sub-bubble {
-              width: 35.83%;
-              height: 35.83%;
-              background: $tertiary-color;
-              border-radius: 4% 50% 50% 50%;
+              @include bubble-style(35.83%, 35.83%, 4% 50% 50% 50%, $tertiary-color);
               position: absolute;
               left: 0;
               bottom: -6.33%;
@@ -171,8 +166,9 @@
         text-decoration: none;
         transition: background-color 0.2s;
 
-        &:hover {
-          background-color: darken($color: $primary-color, $amount: 3);
+        &:hover,
+        &:active {
+          background-color: darken($color: $primary-color, $amount: 3.5);
         }
       }
     }
@@ -184,27 +180,14 @@
       column-gap: 3.6rem;
 
       .category {
+        @include hover-scale-up;
         background-color: #fff;
         border-radius: 17rem 10% 12rem 12rem;
         padding: 2.6rem 2.6rem 0 2.6rem;
         text-decoration: none;
-        transition: all 0.2s;
-
-        &:hover {
-          transform: scale(1.015);
-          box-shadow: 1rem 1rem 5rem 0 rgba(0, 0, 0, 0.05);
-        }
-
-        &:active {
-          transform: scale(1.01);
-          box-shadow: 1rem 1rem 3rem 0 rgba(0, 0, 0, 0.075);
-        }
 
         .bubble {
-          width: 31rem;
-          height: 31rem;
-          background-color: #c4c4c4;
-          border-radius: 50% 10% 50% 50%;
+          @include bubble-style(31rem, 31rem, 50% 10% 50% 50%, #c4c4c4);
         }
 
         .name {
@@ -229,8 +212,9 @@
         text-decoration: none;
         transition: background-color 0.2s;
 
-        &:hover {
-          background-color: darken($color: $primary-color, $amount: 3);
+        &:hover,
+        &:active {
+          background-color: darken($color: $primary-color, $amount: 3.5);
         }
       }
     }
@@ -244,68 +228,49 @@
 
     .left {
       .bubble-container-main {
-        width: 66.7rem;
-        height: 66.7rem;
-        background-color: $secondary-color;
-        border-radius: 5% 50% 50% 50%;
+        @include bubble-style(66.7rem, 66.7rem, 5% 50% 50% 50%, $secondary-color);
         position: relative;
 
         .bubble-container-top-left {
+          @include bubble-style(45.43%, 55.02%, 10% 14rem 11rem 11rem, #fff);
           position: absolute;
           top: -8.7%;
           left: 12.89%;
-          height: 55.02%;
-          width: 45.43%;
-          background-color: #fff;
           box-shadow: 0 0.34rem 10.2rem rgba(58, 86, 78, 0.07);
-          border-radius: 10% 14rem 11rem 11rem;
           padding: 2.1rem 2.1rem 0 2.1rem;
 
           .bubble-top-left {
-            width: 100%;
-            height: 75.14%;
-            border-radius: 10% 50% 50% 50%;
+            @include bubble-style(100%, 75.14%, 10% 50% 50% 50%);
           }
         }
 
         .bubble-top-right {
+          @include bubble-style(32.23%, 32.23%, 50% 10% 50% 50%, $primary-color);
           position: absolute;
           right: 6.9%;
           top: 6.9%;
-          width: 32.23%;
-          height: 32.23%;
-          background-color: $primary-color;
-          border-radius: 50% 10% 50% 50%;
           z-index: 1;
         }
 
         .bubble-container-bottom-right {
+          @include bubble-style(54.57%, 66.27%, 17rem 10% 12rem 10rem, #fff);
           position: absolute;
           bottom: 0;
           right: 16.94%;
-          width: 54.57%;
-          height: 66.27%;
-          background-color: #fff;
           box-shadow: 0 0.34rem 10.2rem rgba(58, 86, 78, 0.07);
-          border-radius: 17rem 10% 12rem 10rem;
           padding: 2.2rem 2.2rem 0 2.2rem;
           box-shadow: -1rem -1rem 15rem rgba(58, 86, 78, 0.3);
 
           .bubble-bottom-right {
-            width: 100%;
-            height: 76.67%;
-            border-radius: 50% 10% 50% 50%;
+            @include bubble-style(100%, 76.67%, 50% 10% 50% 50%);
           }
         }
 
         .bubble-bottom-left {
+          @include bubble-style(32.23%, 32.23%, 10% 50% 50% 50%, $primary-color);
           position: absolute;
           left: 10.49%;
           bottom: -5.25%;
-          width: 32.23%;
-          height: 32.23%;
-          background-color: $primary-color;
-          border-radius: 10% 50% 50% 50%;
           z-index: 1;
         }
       }
@@ -346,8 +311,9 @@
         color: #fff;
         transition: background-color 0.2s;
 
-        &:hover {
-          background-color: darken($color: $primary-color, $amount: 3);
+        &:hover,
+        &:active {
+          background-color: darken($color: $primary-color, $amount: 3.5);
         }
       }
     }
@@ -392,7 +358,8 @@
         color: rgba(255, 255, 255, 1);
         background-color: rgba(255, 255, 255, 0.15);
         border-radius: 1rem;
-        border: none;
+        border: 0.15rem solid transparent;
+        transition: border 0.15s ease-out;
 
         &::placeholder {
           color: rgba(255, 255, 255, 0.7);
@@ -400,6 +367,7 @@
 
         &:focus {
           outline: none;
+          border: 0.15rem solid rgba(255, 255, 255, 1);
         }
       }
 
@@ -415,8 +383,9 @@
         color: rgba(255, 255, 255, 1);
         background-color: rgba(255, 255, 255, 0.15);
         border-radius: 1rem;
-        border: none;
+        border: 0.15rem solid transparent;
         resize: none;
+        transition: border 0.15s ease-out;
 
         &::placeholder {
           color: rgba(255, 255, 255, 0.7);
@@ -424,6 +393,7 @@
 
         &:focus {
           outline: none;
+          border: 0.15rem solid rgba(255, 255, 255, 1);
         }
       }
 
@@ -443,8 +413,9 @@
         width: fit-content;
         transition: background-color 0.2s;
 
-        &:hover {
-          background-color: darken($color: $primary-color, $amount: 3);
+        &:hover,
+        &:active {
+          background-color: darken($color: $primary-color, $amount: 3.5);
         }
 
         &:hover {
@@ -453,24 +424,18 @@
       }
 
       .right-bubble {
+        @include bubble-style(16.7rem, 16.7rem, 10% 50% 50% 50%, $primary-color);
         position: absolute;
         right: -5.3rem;
         top: 4rem;
-        width: 16.7rem;
-        height: 16.7rem;
-        background-color: $primary-color;
-        border-radius: 10% 50% 50% 50%;
         z-index: 1;
       }
 
       .left-bubble {
+        @include bubble-style(16.7rem, 16.7rem, 50% 10% 50% 50%, $primary-color);
         position: absolute;
         left: -5.3rem;
         bottom: 4rem;
-        width: 16.7rem;
-        height: 16.7rem;
-        background-color: $primary-color;
-        border-radius: 50% 10% 50% 50%;
         z-index: 1;
       }
     }
@@ -517,10 +482,11 @@
         background-color: $primary-color;
         color: #fff;
         @include display-flex-center;
-        transition: background-color 0.2s;
+        transition: background-color 0.25s;
 
-        &:hover {
-          background-color: darken($color: $primary-color, $amount: 3);
+        &:hover,
+        &:active {
+          background-color: darken($color: $primary-color, $amount: 6);
         }
 
         svg {
@@ -548,8 +514,7 @@
         .main {
           .right {
             .bubble {
-              width: 40vw;
-              height: 40vw;
+              @include bubble-style(40vw, 40vw);
               margin-right: -5rem;
             }
           }
@@ -629,8 +594,7 @@
 
           .right {
             .bubble {
-              width: 72vw;
-              height: 72vw;
+              @include bubble-style(72vw, 72vw);
               margin-right: 0;
             }
           }
@@ -839,8 +803,7 @@
           padding: 2.6rem 2.6rem 0 2.6rem;
 
           .bubble {
-            width: 25rem;
-            height: 25rem;
+            @include bubble-style(25rem, 25rem);
           }
 
           .name {

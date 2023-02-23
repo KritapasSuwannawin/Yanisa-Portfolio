@@ -31,26 +31,32 @@
         font-weight: 600;
         font-size: 3rem;
         color: #000;
+
+        p {
+          a {
+            text-decoration: none;
+            transition: color 0.15s ease-out;
+
+            &:hover,
+            &:active {
+              color: darken($color: $primary-color, $amount: 6);
+            }
+          }
+        }
       }
 
       .right-bubble {
+        @include bubble-style(18.8rem, 18.8rem, 8% 50% 50% 50%, $primary-color);
         position: absolute;
         right: -13rem;
         top: 6rem;
-        width: 18.8rem;
-        height: 18.8rem;
-        background-color: $primary-color;
-        border-radius: 8% 50% 50% 50%;
       }
 
       .left-bubble {
+        @include bubble-style(18.8rem, 18.8rem, 50% 8% 50% 50%, $primary-color);
         position: absolute;
         left: -12rem;
         bottom: 1.7rem;
-        width: 18.8rem;
-        height: 18.8rem;
-        background-color: $primary-color;
-        border-radius: 50% 8% 50% 50%;
       }
     }
   }
@@ -90,8 +96,7 @@
 
         .right-bubble,
         .left-bubble {
-          width: 16rem;
-          height: 16rem;
+          @include bubble-style(16rem, 16rem);
         }
       }
     }

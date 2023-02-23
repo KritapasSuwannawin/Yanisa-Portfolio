@@ -21,6 +21,7 @@
       }
 
       .picture {
+        @include hover-scale-up;
         width: 100%;
         max-width: 80rem;
       }
