@@ -45,9 +45,9 @@ function Home() {
                   Bhisitcharoentat<span className="space"> </span>,
                 </span>
                 <br></br>
-                UX/UI Designer &amp;
+                Product Owner &amp;
                 <br></br>
-                Graphic Designer
+                UX/UI Designer
               </p>
               <p className="content">
                 “ How well we communicate is determined not by<br></br>
